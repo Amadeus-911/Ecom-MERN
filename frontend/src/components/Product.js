@@ -6,7 +6,10 @@ import { Link } from 'react-router-dom';
 const Product = ({ product }) => {
     return (
         <>
-            <Card className="my-3 p-3 rounded" style={{ height: '90%' }}>
+            <Card
+                className="my-3 p-3 rounded"
+                style={{ height: '90%', boxShadow: '2px 2px 2px gray' }}
+            >
                 <Link to={`/product/${product._id}`}>
                     <Card.Img src={product.image} variant="top" />
                 </Link>

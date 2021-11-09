@@ -51,7 +51,9 @@ const Rating = ({ value, reviews }) => {
                     ? halfStarIcon
                     : emptyStarIcon}
             </span>
-            <span>{reviews} reviews</span>
+            <span>
+                {reviews} {reviews ? 'reviews' : ''}
+            </span>
         </>
     );
 };

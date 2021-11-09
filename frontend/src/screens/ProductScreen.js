@@ -17,6 +17,24 @@ const ProductScreen = () => {
                     <FontAwesomeIcon icon={faArrowLeft} /> Go Back
                 </span>
             </Link>
+            <Row>
+                <Col md={6}>
+                    <Image src={product.image} fluid />
+                </Col>
+                <Col md={3}>
+                    <ListGroup variant="flush">
+                        <ListGroup.Item>
+                            <h3>{product.name}</h3>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
+                            <Rating
+                                value={product.rating}
+                                reviews={product.numReviews}
+                            />
+                        </ListGroup.Item>
+                    </ListGroup>
+                </Col>
+            </Row>
         </div>
     );
 };
