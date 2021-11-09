@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
-
 const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />;
 const userIcon = <FontAwesomeIcon icon={faUser} />;
 
