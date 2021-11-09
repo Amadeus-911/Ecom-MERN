@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />;
 const userIcon = <FontAwesomeIcon icon={faUser} />;
 
@@ -16,12 +18,22 @@ const Header = () => {
                 collapseOnSelect
             >
                 <Container>
-                    <Navbar.Brand href="/">E-Mart</Navbar.Brand>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <Navbar.Brand href="/">E-Mart</Navbar.Brand>
+                    </Link>
+
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="/cart">{cartIcon} Cart</Nav.Link>
-                            <Nav.Link href="/login">{userIcon} Login</Nav.Link>
+                            <Link to="/cart" style={{ textDecoration: 'none' }}>
+                                <Nav.Link>{cartIcon} Cart</Nav.Link>
+                            </Link>
+                            <Link
+                                to="/login"
+                                style={{ textDecoration: 'none' }}
+                            >
+                                <Nav.Link>{userIcon} Login</Nav.Link>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
