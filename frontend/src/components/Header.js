@@ -9,7 +9,13 @@ const userIcon = <FontAwesomeIcon icon={faUser} />;
 const Header = () => {
     return (
         <header>
-            <Navbar bg="black" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar
+                bg="dark"
+                variant="dark"
+                expand="lg"
+                style={{ height: '50px' }}
+                collapseOnSelect
+            >
                 <Container>
                     <Navbar.Brand href="/">E-Mart</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
