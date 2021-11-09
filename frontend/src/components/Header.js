@@ -10,13 +10,7 @@ const userIcon = <FontAwesomeIcon icon={faUser} />;
 const Header = () => {
     return (
         <header>
-            <Navbar
-                bg="dark"
-                variant="dark"
-                expand="lg"
-                style={{ height: '50px' }}
-                collapseOnSelect
-            >
+            <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <Link to="/" style={{ textDecoration: 'none' }}>
                         <Navbar.Brand href="/">E-Mart</Navbar.Brand>
