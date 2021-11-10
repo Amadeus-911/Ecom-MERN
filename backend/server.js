@@ -1,11 +1,16 @@
-import products from './data/products';
+const products = require('./data/products');
 const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('hello');
+app.get('/api/products', (req, res) => {
+    res.json(products);
 });
 
-const port = env.port || 5000;
+app.get('/api/products/:id', (req, res) => {
+    let product = products.find((p) => p._id === req.params.id);
+    res.json(product);
+});
+
+const port = 5000;
 app.listen(port, console.log(`This is port ${port}`));
