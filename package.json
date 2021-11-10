@@ -1,0 +1,25 @@
+{
+    "name": "ecommerce-site",
+    "version": "1.0.0",
+    "description": "E-Mart MERN web APp",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BlackBird-911/Ecom-MERN.git"
+    },
+    "keywords": [
+        "Mern"
+    ],
+    "author": "Ifty Khan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BlackBird-911/Ecom-MERN/issues"
+    },
+    "homepage": "https://github.com/BlackBird-911/Ecom-MERN#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
