@@ -1,22 +1,22 @@
-import React from 'react';
-import {
-    Container,
-    Row,
-    Col,
-    Image,
-    ListGroup,
-    Button,
-    ListGroupItem,
-} from 'react-bootstrap';
-import products from '../products';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Image, ListGroup, Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import Rating from '../components/Rating';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 
 const ProductScreen = () => {
     const { id } = useParams();
-    const product = products.find((p) => p._id === id);
+    const [product, setProduct] = useState([]);
+    useEffect(() => {
+        const fetchProduct = async () => {
+            const res = await axios.get(`/api/products/${id}`);
+            setProduct(res.data);
+        };
+
+        fetchProduct();
+    }, []);
 
     return (
         <Container>
